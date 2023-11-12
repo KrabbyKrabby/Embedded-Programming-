@@ -1,0 +1,184 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Ittehad Chowdhury, CSEDU, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.38.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.19
+Assembler:       Armasm.exe V6.19
+Linker/Locator:  ArmLink.exe V6.19
+Library Manager: ArmAr.exe V6.19
+Hex Converter:   FromElf.exe V6.19
+CPU DLL:         SARMCM3.DLL V5.38.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.1.0.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+C:\Users\Ittehad\Desktop\MC\blinky\test.uvprojx
+Project File Date:  02/01/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+assembling startup_stm32f446xx.s...
+CLOCK.c(31): warning: In file included from...
+./CLOCK.h(39): warning: // comments are not allowed in this language [-Wcomment]
+#define PLL_P 0 //0 to the sixteenth position (PLL=2)
+                ^
+CLOCK.c(60): warning: // comments are not allowed in this language [-Wcomment]
+RCC->CR |=RCC_CR_HSEON; // set CR bit 16 
+                        ^
+2 warnings generated.
+compiling CLOCK.c...
+compiling system_stm32f4xx.c...
+GPIO.c(32): warning: In file included from...
+./CLOCK.h(39): warning: // comments are not allowed in this language [-Wcomment]
+#define PLL_P 0 //0 to the sixteenth position (PLL=2)
+                ^
+GPIO.c(55): warning: // comments are not allowed in this language [-Wcomment]
+                //MODER
+                ^
+2 warnings generated.
+compiling GPIO.c...
+SYS_INIT.c(36): warning: // comments are not allowed in this language [-Wcomment]
+// Systick ISR executes every milli-second
+^
+1 warning generated.
+compiling SYS_INIT.c...
+USART.c(31): warning: In file included from...
+./USART.h(49): warning: // comments are not allowed in this language [-Wcomment]
+// USART 2 Configuration
+^
+USART.c(34): warning: In file included from...
+./CLOCK.h(39): warning: // comments are not allowed in this language [-Wcomment]
+#define PLL_P 0 //0 to the sixteenth position (PLL=2)
+                ^
+USART.c(47): warning: variable declaration in for loop is a C99-specific feature [-Wc99-extensions]
+        for(uint8_t i=0;i<size;i++){
+            ^
+USART.c(47): warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
+USART.c(58): warning: variable declaration in for loop is a C99-specific feature [-Wc99-extensions]
+        for(uint8_t i=0;i<size;i++){
+            ^
+USART.c(58): warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
+USART.c(76): warning: // comments are not allowed in this language [-Wcomment]
+// Send a string to the UART PORTx
+^
+7 warnings generated.
+compiling USART.c...
+main.c(2): warning: In file included from...
+./CLOCK.h(39): warning: // comments are not allowed in this language [-Wcomment]
+#define PLL_P 0 //0 to the sixteenth position (PLL=2)
+                ^
+main.c(10): warning: // comments are not allowed in this language [-Wcomment]
+        //initialize bus
+        ^
+main.c(15): warning: mixing declarations and code is a C99 extension [-Wdeclaration-after-statement]
+        GPIO_InitTypeDef InitDef;
+                         ^
+main.c(7): warning: no previous prototype for function 'GPIO_Config' [-Wmissing-prototypes]
+void GPIO_Config(void)
+     ^
+main.c(7): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void GPIO_Config(void)
+^
+static 
+main.c(29): warning: variable declaration in for loop is a C99-specific feature [-Wc99-extensions]
+        for( int i = 1; i <= it; i++ )
+             ^
+main.c(29): warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
+main.c(26): warning: no previous prototype for function 'traffic_flow_delay_ms_x' [-Wmissing-prototypes]
+void traffic_flow_delay_ms_x( int tm )
+     ^
+main.c(26): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void traffic_flow_delay_ms_x( int tm )
+^
+static 
+main.c(60): warning: variable declaration in for loop is a C99-specific feature [-Wc99-extensions]
+        for( int i = 1; i <= it; i++ )
+             ^
+main.c(60): warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
+main.c(57): warning: no previous prototype for function 'traffic_flow_delay_ms_y' [-Wmissing-prototypes]
+void traffic_flow_delay_ms_y( int tm )
+     ^
+main.c(57): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void traffic_flow_delay_ms_y( int tm )
+^
+static 
+main.c(88): warning: no previous prototype for function 'write_up' [-Wmissing-prototypes]
+void write_up(int no,GPIO_PinState PinState)
+     ^
+main.c(88): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void write_up(int no,GPIO_PinState PinState)
+^
+static 
+main.c(101): warning: no previous prototype for function 'write_down' [-Wmissing-prototypes]
+void write_down(int no,GPIO_PinState PinState)
+     ^
+main.c(101): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void write_down(int no,GPIO_PinState PinState)
+^
+static 
+main.c(114): warning: no previous prototype for function 'write_left' [-Wmissing-prototypes]
+void write_left(int no,GPIO_PinState PinState)
+     ^
+main.c(114): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void write_left(int no,GPIO_PinState PinState)
+^
+static 
+main.c(127): warning: no previous prototype for function 'write_right' [-Wmissing-prototypes]
+void write_right(int no,GPIO_PinState PinState)
+     ^
+main.c(127): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void write_right(int no,GPIO_PinState PinState)
+^
+static 
+main.c(148): warning: mixing declarations and code is a C99 extension [-Wdeclaration-after-statement]
+        int up, down, left, right;
+            ^
+15 warnings generated.
+compiling main.c...
+linking...
+Program Size: Code=2640 RO-data=468 RW-data=0 ZI-data=1864  
+".\Objects\test.axf" - 0 Error(s), 27 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F4xx_DFP.2.17.0.pack
+                Keil.STM32F4xx_DFP.2.17.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 2.6.3
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_Target_1
+  C:/Users/Ittehad/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/Ittehad/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: Keil::Device:Startup:2.6.3
+      Source file:   MDK/Device/Source/ARM/STM32F446xx_OPT.s
+      Source file:   MDK/Device/Source/ARM/STM32F4xx_OTP.s
+      Include file:  Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f446xx.s
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>

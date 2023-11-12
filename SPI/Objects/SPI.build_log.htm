@@ -1,0 +1,346 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Ittehad Chowdhury, CSEDU, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.38.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.19
+Assembler:       Armasm.exe V6.19
+Linker/Locator:  ArmLink.exe V6.19
+Library Manager: ArmAr.exe V6.19
+Hex Converter:   FromElf.exe V6.19
+CPU DLL:         SARMCM3.DLL V5.38.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.1.0.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+C:\Users\Ittehad\Desktop\MC\SPI\SPI.uvprojx
+Project File Date:  05/09/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+CLOCK.c(31): warning: In file included from...
+./CLOCK.h(39): warning: // comments are not allowed in this language [-Wcomment]
+#define PLL_P 0 //0 to the sixteenth position (PLL=2)
+                ^
+CLOCK.c(60): warning: // comments are not allowed in this language [-Wcomment]
+RCC->CR |=RCC_CR_HSEON; // set CR bit 16 
+                        ^
+2 warnings generated.
+compiling CLOCK.c...
+USART.c(31): warning: In file included from...
+./USART.h(49): warning: // comments are not allowed in this language [-Wcomment]
+// USART 2 Configuration
+^
+USART.c(34): warning: In file included from...
+./CLOCK.h(39): warning: // comments are not allowed in this language [-Wcomment]
+#define PLL_P 0 //0 to the sixteenth position (PLL=2)
+                ^
+USART.c(48): warning: variable declaration in for loop is a C99-specific feature [-Wc99-extensions]
+        for(uint8_t i=0;i<size;i++){
+            ^
+USART.c(48): warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
+USART.c(59): warning: variable declaration in for loop is a C99-specific feature [-Wc99-extensions]
+        for(uint8_t i=0;i<size;i++){
+            ^
+USART.c(59): warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
+USART.c(77): warning: // comments are not allowed in this language [-Wcomment]
+// Send a string to the UART PORTx
+^
+USART.c(150): warning: no previous prototype for function 'UART4_Config' [-Wmissing-prototypes]
+void UART4_Config(void){
+     ^
+USART.c(150): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void UART4_Config(void){
+^
+static 
+USART.c(198): warning: no previous prototype for function 'UART5_Config' [-Wmissing-prototypes]
+void UART5_Config(void){
+     ^
+USART.c(198): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void UART5_Config(void){
+^
+static 
+9 warnings generated.
+compiling USART.c...
+compiling system_stm32f4xx.c...
+SYS_INIT.c(36): warning: // comments are not allowed in this language [-Wcomment]
+// Systick ISR executes every milli-second
+^
+1 warning generated.
+compiling SYS_INIT.c...
+GPIO.c(32): warning: In file included from...
+./CLOCK.h(39): warning: // comments are not allowed in this language [-Wcomment]
+#define PLL_P 0 //0 to the sixteenth position (PLL=2)
+                ^
+GPIO.c(54): warning: // comments are not allowed in this language [-Wcomment]
+                //MODER
+                ^
+GPIO.c(69): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+        for( pos = st ; pos < 12; pos++ )
+                 ~ ^~
+GPIO.c(63): warning: no previous prototype for function 'GPIOInit' [-Wmissing-prototypes]
+void GPIOInit(GPIO_TypeDef* GPIOx,GPIO_InitTypeDef *GPIO_Init,int st)
+     ^
+GPIO.c(63): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void GPIOInit(GPIO_TypeDef* GPIOx,GPIO_InitTypeDef *GPIO_Init,int st)
+^
+static 
+4 warnings generated.
+compiling GPIO.c...
+assembling startup_stm32f446xx.s...
+main.c(2): warning: In file included from...
+./USART.h(49): warning: // comments are not allowed in this language [-Wcomment]
+// USART 2 Configuration
+^
+main.c(8): warning: no previous extern declaration for non-static variable 'input_idx' [-Wmissing-variable-declarations]
+int input_idx = 0;
+    ^
+main.c(8): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int input_idx = 0;
+^
+main.c(22): warning: no previous prototype for function 'getString' [-Wmissing-prototypes]
+void getString(void){
+     ^
+main.c(22): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void getString(void){
+^
+static 
+main.c(34): warning: no previous prototype for function 'TIM2Config' [-Wmissing-prototypes]
+void TIM2Config(void)
+     ^
+main.c(34): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void TIM2Config(void)
+^
+static 
+main.c(46): warning: no previous prototype for function 'TIM5Config' [-Wmissing-prototypes]
+void TIM5Config(void)
+     ^
+main.c(46): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void TIM5Config(void)
+^
+static 
+main.c(59): warning: no previous prototype for function 'delay' [-Wmissing-prototypes]
+void delay(int ms)
+     ^
+main.c(59): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void delay(int ms)
+^
+static 
+main.c(63): warning: comparison of integers of different signs: 'volatile uint32_t' (aka 'volatile unsigned int') and 'int' [-Wsign-compare]
+        while(TIM5 -> CNT <= ms){
+              ~~~~~~~~~~~ ^  ~~
+main.c(65): warning: comparison of integers of different signs: 'volatile uint32_t' (aka 'volatile unsigned int') and 'int' [-Wsign-compare]
+                if(TIM2->CNT > monitor*2){
+                   ~~~~~~~~~ ^ ~~~~~~~~~
+main.c(77): warning: // comments are not allowed in this language [-Wcomment]
+        //PA5,PA6,PA7
+        ^
+main.c(89): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        SPI1 -> CR1 &= ~(1<<7); //MSB first
+                    ~~ ^~~~~~~
+main.c(90): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        SPI1 -> CR1 &= ~(1<<11); //DFF = 1
+                    ~~ ^~~~~~~~
+main.c(96): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                SPI1 -> CR1 &= ~(1<<10); //RXONLY = 1
+                            ~~ ^~~~~~~~
+main.c(101): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                SPI1 -> CR1 &= ~(1<<10); //RXONLY = 1
+                            ~~ ^~~~~~~~
+main.c(102): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                SPI1 -> CR1 &= ~(1<<2); //Slave mode
+                            ~~ ^~~~~~~
+main.c(75): warning: no previous prototype for function 'SPI_Config' [-Wmissing-prototypes]
+void SPI_Config(int master)
+     ^
+main.c(75): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void SPI_Config(int master)
+^
+static 
+main.c(110): warning: variable declaration in for loop is a C99-specific feature [-Wc99-extensions]
+        for(int i = 0; i < strlen(input); i++){
+            ^
+main.c(110): warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
+main.c(119): warning: mixing declarations and code is a C99 extension [-Wdeclaration-after-statement]
+        int temp = (uint8_t)SPI1->DR;
+            ^
+main.c(119): warning: variable 'temp' set but not used [-Wunused-but-set-variable]
+main.c(108): warning: no previous prototype for function 'SPI_Send' [-Wmissing-prototypes]
+void SPI_Send(void)
+     ^
+main.c(108): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void SPI_Send(void)
+^
+static 
+main.c(110): warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+        for(int i = 0; i < strlen(input); i++){
+                       ~ ^ ~~~~~~~~~~~~~
+main.c(130): warning: implicit conversion loses integer precision: 'volatile uint32_t' (aka 'volatile unsigned int') to 'char' [-Wimplicit-int-conversion]
+                ch = SPI1 -> DR;
+                   ~ ~~~~~~~~^~
+main.c(123): warning: no previous prototype for function 'SPI_Receive' [-Wmissing-prototypes]
+void SPI_Receive(void)
+     ^
+main.c(123): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void SPI_Receive(void)
+^
+static 
+main.c(139): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        SPI1 -> CR2 &= ~( 1<<6 );
+                    ~~ ^~~~~~~~~
+main.c(138): warning: no previous prototype for function 'SPI1_IRQHandler' [-Wmissing-prototypes]
+void SPI1_IRQHandler(void){
+     ^
+main.c(138): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void SPI1_IRQHandler(void){
+^
+static 
+main.c(151): warning: no previous prototype for function 'USART2_IRQHandler' [-Wmissing-prototypes]
+void USART2_IRQHandler(void){
+     ^
+main.c(151): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void USART2_IRQHandler(void){
+^
+static 
+main.c(165): warning: implicit declaration of function 'GPIOInit' [-Wimplicit-function-declaration]
+        GPIOInit(GPIOC,&InitDef);
+        ^
+main.c(162): warning: mixing declarations and code is a C99 extension [-Wdeclaration-after-statement]
+        GPIO_InitTypeDef InitDef;
+                         ^
+main.c(159): warning: no previous prototype for function 'GPIO_Config' [-Wmissing-prototypes]
+void GPIO_Config(void)
+     ^
+main.c(159): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void GPIO_Config(void)
+^
+static 
+main.c(168): warning: no previous prototype for function 'config_traffic' [-Wmissing-prototypes]
+void config_traffic(int no,char color,int delay)
+     ^
+main.c(168): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void config_traffic(int no,char color,int delay)
+^
+static 
+main.c(195): warning: no previous prototype for function 'send_traffic_1' [-Wmissing-prototypes]
+void send_traffic_1(int g,int y,int r,int ux)
+     ^
+main.c(195): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void send_traffic_1(int g,int y,int r,int ux)
+^
+static 
+main.c(205): warning: no previous prototype for function 'send_traffic_2' [-Wmissing-prototypes]
+void send_traffic_2(int g,int y,int r,int ux)
+     ^
+main.c(205): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void send_traffic_2(int g,int y,int r,int ux)
+^
+static 
+main.c(214): warning: no previous prototype for function 'send_traffic_monitor' [-Wmissing-prototypes]
+void send_traffic_monitor(int m)
+     ^
+main.c(214): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void send_traffic_monitor(int m)
+^
+static 
+main.c(226): warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+        int l = strlen(input);
+            ~   ^~~~~~~~~~~~~
+main.c(272): warning: no previous extern declaration for non-static variable 'sz' [-Wmissing-variable-declarations]
+int sz = 0;
+    ^
+main.c(272): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int sz = 0;
+^
+main.c(275): warning: no previous prototype for function 'add_state' [-Wmissing-prototypes]
+void add_state(int k)
+     ^
+main.c(275): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void add_state(int k)
+^
+static 
+main.c(283): warning: variable declaration in for loop is a C99-specific feature [-Wc99-extensions]
+        for( int i = 0; i < sz; i++ ){
+             ^
+main.c(283): warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
+main.c(330): warning: variable declaration in for loop is a C99-specific feature [-Wc99-extensions]
+                for( int i = 0; i < 2; i++ ) arra[i] = arra[i+1];
+                     ^
+main.c(330): warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
+main.c(338): warning: implicit declaration of function 'initClock' [-Wimplicit-function-declaration]
+        initClock();
+        ^
+main.c(336): warning: no previous prototype for function 'init' [-Wmissing-prototypes]
+void init(void)
+     ^
+main.c(336): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void init(void)
+^
+static 
+main.c(346): warning: no previous prototype for function 'Traffic_loop' [-Wmissing-prototypes]
+void Traffic_loop(void)
+     ^
+main.c(346): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void Traffic_loop(void)
+^
+static 
+main.c(347): warning: function 'Traffic_loop' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+main.c(422): warning: mixing declarations and code is a C99 extension [-Wdeclaration-after-statement]
+        int master = 0;
+            ^
+main.c(9): warning: no previous extern declaration for non-static variable 'input' [-Wmissing-variable-declarations]
+char input[100];
+     ^
+main.c(9): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+char input[100];
+^
+46 warnings generated.
+compiling main.c...
+linking...
+Program Size: Code=19420 RO-data=1436 RW-data=32 ZI-data=2184  
+".\Objects\SPI.axf" - 0 Error(s), 62 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F4xx_DFP.2.17.0.pack
+                Keil.STM32F4xx_DFP.2.17.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 2.6.3
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_Target_1
+  C:/Users/Ittehad/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/Ittehad/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: Keil::Device:Startup:2.6.3
+      Source file:   MDK/Device/Source/ARM/STM32F446xx_OPT.s
+      Source file:   MDK/Device/Source/ARM/STM32F4xx_OTP.s
+      Include file:  Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f446xx.s
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>

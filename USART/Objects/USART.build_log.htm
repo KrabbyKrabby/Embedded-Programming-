@@ -1,0 +1,234 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Ittehad Chowdhury, CSEDU, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.38.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.19
+Assembler:       Armasm.exe V6.19
+Linker/Locator:  ArmLink.exe V6.19
+Library Manager: ArmAr.exe V6.19
+Hex Converter:   FromElf.exe V6.19
+CPU DLL:         SARMCM3.DLL V5.38.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.1.0.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+C:\Users\Ittehad\Desktop\MC\USART\USART.uvprojx
+Project File Date:  03/29/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+assembling startup_stm32f446xx.s...
+compiling system_stm32f4xx.c...
+SYS_INIT.c(36): warning: // comments are not allowed in this language [-Wcomment]
+// Systick ISR executes every milli-second
+^
+1 warning generated.
+compiling SYS_INIT.c...
+CLOCK.c(31): warning: In file included from...
+./CLOCK.h(39): warning: // comments are not allowed in this language [-Wcomment]
+#define PLL_P 0 //0 to the sixteenth position (PLL=2)
+                ^
+CLOCK.c(60): warning: // comments are not allowed in this language [-Wcomment]
+RCC->CR |=RCC_CR_HSEON; // set CR bit 16 
+                        ^
+2 warnings generated.
+compiling CLOCK.c...
+GPIO.c(32): warning: In file included from...
+./CLOCK.h(39): warning: // comments are not allowed in this language [-Wcomment]
+#define PLL_P 0 //0 to the sixteenth position (PLL=2)
+                ^
+GPIO.c(54): warning: // comments are not allowed in this language [-Wcomment]
+                //MODER
+                ^
+GPIO.c(69): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+        for( pos = st ; pos < 12; pos++ )
+                 ~ ^~
+GPIO.c(63): warning: no previous prototype for function 'GPIOInit' [-Wmissing-prototypes]
+void GPIOInit(GPIO_TypeDef* GPIOx,GPIO_InitTypeDef *GPIO_Init,int st)
+     ^
+GPIO.c(63): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void GPIOInit(GPIO_TypeDef* GPIOx,GPIO_InitTypeDef *GPIO_Init,int st)
+^
+static 
+4 warnings generated.
+compiling GPIO.c...
+USART.c(31): warning: In file included from...
+./USART.h(49): warning: // comments are not allowed in this language [-Wcomment]
+// USART 2 Configuration
+^
+USART.c(34): warning: In file included from...
+./CLOCK.h(39): warning: // comments are not allowed in this language [-Wcomment]
+#define PLL_P 0 //0 to the sixteenth position (PLL=2)
+                ^
+USART.c(48): warning: variable declaration in for loop is a C99-specific feature [-Wc99-extensions]
+        for(uint8_t i=0;i<size;i++){
+            ^
+USART.c(48): warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
+USART.c(59): warning: variable declaration in for loop is a C99-specific feature [-Wc99-extensions]
+        for(uint8_t i=0;i<size;i++){
+            ^
+USART.c(59): warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
+USART.c(77): warning: // comments are not allowed in this language [-Wcomment]
+// Send a string to the UART PORTx
+^
+USART.c(150): warning: no previous prototype for function 'UART4_Config' [-Wmissing-prototypes]
+void UART4_Config(void){
+     ^
+USART.c(150): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void UART4_Config(void){
+^
+static 
+USART.c(198): warning: no previous prototype for function 'UART5_Config' [-Wmissing-prototypes]
+void UART5_Config(void){
+     ^
+USART.c(198): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void UART5_Config(void){
+^
+static 
+9 warnings generated.
+compiling USART.c...
+main.c(1): warning: In file included from...
+./CLOCK.h(39): warning: // comments are not allowed in this language [-Wcomment]
+#define PLL_P 0 //0 to the sixteenth position (PLL=2)
+                ^
+main.c(4): warning: In file included from...
+./USART.h(49): warning: // comments are not allowed in this language [-Wcomment]
+// USART 2 Configuration
+^
+main.c(55): warning: implicit declaration of function 'GPIOInit' [-Wimplicit-function-declaration]
+        GPIOInit(GPIOA,&InitDef,4);
+        ^
+main.c(50): warning: mixing declarations and code is a C99 extension [-Wdeclaration-after-statement]
+        GPIO_InitTypeDef InitDef;
+                         ^
+main.c(63): warning: // comments are not allowed in this language [-Wcomment]
+        //UART_SendString(USART2,"4 to 5\n");
+        ^
+main.c(64): warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+        int l = strlen(input);
+            ~   ^~~~~~~~~~~~~
+main.c(65): warning: variable declaration in for loop is a C99-specific feature [-Wc99-extensions]
+        for( int i = 0; i < strlen(input); i++ ){
+             ^
+main.c(65): warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
+main.c(65): warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+        for( int i = 0; i < strlen(input); i++ ){
+                        ~ ^ ~~~~~~~~~~~~~
+main.c(80): warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+        int l = strlen(input);
+            ~   ^~~~~~~~~~~~~
+main.c(82): warning: variable declaration in for loop is a C99-specific feature [-Wc99-extensions]
+        for( int i = 0; i < strlen(input); i++ ){
+             ^
+main.c(82): warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
+main.c(82): warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+        for( int i = 0; i < strlen(input); i++ ){
+                        ~ ^ ~~~~~~~~~~~~~
+main.c(152): warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+        int l = strlen(output);
+            ~   ^~~~~~~~~~~~~~
+main.c(206): warning: implicit conversion loses integer precision: 'volatile uint32_t' (aka 'volatile unsigned int') to 'char' [-Wimplicit-int-conversion]
+                output[ output_idx ] = UART4 -> DR;
+                                     ~ ~~~~~~~~~^~
+main.c(239): warning: passing 'char[100]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+                GetString(USART2,input);
+                                 ^~~~~
+main.c(189): note: passing argument to parameter 'buff' here
+void GetString(USART_TypeDef *uart,uint8_t* buff)
+                                            ^
+main.c(305): warning: no previous extern declaration for non-static variable 'sz' [-Wmissing-variable-declarations]
+int sz = 0;
+    ^
+main.c(305): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int sz = 0;
+^
+main.c(316): warning: variable declaration in for loop is a C99-specific feature [-Wc99-extensions]
+        for( int i = 0; i < sz; i++ ){
+             ^
+main.c(316): warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
+main.c(359): warning: variable declaration in for loop is a C99-specific feature [-Wc99-extensions]
+                for( int i = 0; i < 2; i++ ) arra[i] = arra[i+1];
+                     ^
+main.c(359): warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
+main.c(382): warning: comparison of integers of different signs: 'volatile uint32_t' (aka 'volatile unsigned int') and 'int' [-Wsign-compare]
+                if(TIM2->CNT > monitor*2){
+                   ~~~~~~~~~ ^ ~~~~~~~~~
+main.c(405): warning: implicit declaration of function 'UART4_Config' [-Wimplicit-function-declaration]
+        UART4_Config();
+        ^
+main.c(406): warning: implicit declaration of function 'UART5_Config' [-Wimplicit-function-declaration]
+        UART5_Config();
+        ^
+main.c(435): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+                tim5_delay(g2);
+                ~~~~~~~~~~ ^~
+main.c(439): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+                        tim5_delay(u);//keeping this light on for 5 sec more of low traffic on the other cross road
+                        ~~~~~~~~~~ ^
+main.c(448): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+                tim5_delay(y2);
+                ~~~~~~~~~~ ^~
+main.c(465): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+                tim5_delay(g1);
+                ~~~~~~~~~~ ^~
+main.c(469): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+                        tim5_delay(u);//keeping this light on for 5 sec more of low traffic on the other cross road
+                        ~~~~~~~~~~ ^
+main.c(477): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+                tim5_delay(y1);
+                ~~~~~~~~~~ ^~
+main.c(489): warning: no newline at end of file [-Wnewline-eof]
+        
+        ^
+main.c(409): warning: mixing declarations and code is a C99 extension [-Wdeclaration-after-statement]
+        int up, down, left, right;
+            ^
+32 warnings generated.
+compiling main.c...
+linking...
+Program Size: Code=20028 RO-data=1404 RW-data=32 ZI-data=2296  
+".\Objects\USART.axf" - 0 Error(s), 48 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F4xx_DFP.2.17.0.pack
+                Keil.STM32F4xx_DFP.2.17.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 2.6.3
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_Target_1
+  C:/Users/Ittehad/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/Ittehad/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: Keil::Device:Startup:2.6.3
+      Source file:   MDK/Device/Source/ARM/STM32F4xx_OTP.s
+      Source file:   MDK/Device/Source/ARM/STM32F446xx_OPT.s
+      Include file:  Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f446xx.s
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
